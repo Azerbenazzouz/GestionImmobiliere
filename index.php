@@ -1,3 +1,6 @@
-<?php 
-    echo "<h1>Test de la classe Appartement</h1>";
+<?php
+    ob_start();
+    echo "<h1> welcome </h1>";
+    $content = ob_get_clean();
+    include "layout.php";
 ?>
