@@ -3,13 +3,6 @@
     require_once "./Model/crudAppartement.php";
     require_once "./Model/Appartement.php";
     if(isset($_POST['Reference']) && isset($_POST['Proprietaire']) && isset($_POST['Localite']) && isset($_POST['Surface']) && isset($_POST['DomaineUsage']) && isset($_POST['NbPieces']) && isset($_POST['SurfaceEspaceCommun'])) {
-        // $Reference = $_POST['Reference'];
-        // $Proprietaire = $_POST['Proprietaire'];
-        // $Localite = $_POST['Localite'];
-        // $Surface = $_POST['Surface'];
-        // $DomaineUsage = $_POST['DomaineUsage'];
-        // $NbPieces = $_POST['NbPieces'];
-        // $SurfaceEspaceCommun = $_POST['SurfaceEspaceCommun'];
 
         $appartement = new Appartement($_POST['Reference'],$_POST['Proprietaire'],$_POST['Localite'],$_POST['Surface'],$_POST['NbPieces'],$_POST['DomaineUsage'],$_POST['SurfaceEspaceCommun']);
 
@@ -21,7 +14,7 @@
             echo "<div class='alert alert-danger'>L'appartement n'a pas pu être ajouté</div>";
         } else {
             echo "<div class='alert alert-success'>Insertion effectuée avec succés
-                    <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                    <a href='http://localhost:3044/' class='btn'>Lister</a>
                 </div>";
         }
     }else{ 
@@ -55,8 +48,8 @@
         <label for="DomaineUsage" class="col-md-4 control-label">Domaine d'usage</label>
         <div class="col-md-9">
             <select class="form-control" id="DomaineUsage" name="DomaineUsage">
-                <option value="Bureau">Bureau</option>
-                <option value="Commerce">Domicile</option>
+                <option value="bureau">Bureau</option>
+                <option value="domicile">Domicile</option>
             </select>
         </div>
     </div>

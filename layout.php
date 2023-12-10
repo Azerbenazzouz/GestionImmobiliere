@@ -23,18 +23,15 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/produits.php">Nos Produit</a>
+                <a class="nav-link" href="/AjoutAppartement.php">Ajout Appartement</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Nos Categories</a>
+                <a class="nav-link" href="/ListerAppartement.php">Lister Appartement</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/contacter_nous.php">Contacter Nous</a>
+                <a class="nav-link" href="/Recherche.php">Recherche Appartement</a>
                 </li>
             </ul>
-            <!-- <ul class="navbar-nav ml-auto">
-                lilhsqdfoiq
-            </ul> -->
         </div>
     </div>
     </nav>

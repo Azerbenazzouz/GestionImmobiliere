@@ -7,7 +7,7 @@
         $obj = new crudAppartement();
         $result = $obj->RecupererApp($_GET['ref']);
         $row = $result->fetch(PDO::FETCH_NUM);
-        // var_dump($row);
+
         if(isset($_POST['Proprietaire']) && isset($_POST['Localite']) && isset($_POST['Surface']) && isset($_POST['DomaineUsage']) && isset($_POST['NbPieces']) && isset($_POST['SurfaceEspaceCommun'])) {
             var_dump($_POST);
             $appartement = new Appartement($_GET['ref'],$_POST['Proprietaire'],$_POST['Localite'],$_POST['Surface'],$_POST['NbPieces'],$_POST['DomaineUsage'],$_POST['SurfaceEspaceCommun']);
