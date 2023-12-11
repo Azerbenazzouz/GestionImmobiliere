@@ -45,8 +45,15 @@
             $nbP = $appartement->getNbPieces();
             $dom = $appartement->getDomaineUsage();
             $surfEspace = $appartement->getSurfaceEspaceCommun();
-            
-            $sql = "UPDATE appartement SET proprietaire='$prop', localite='$loc', surface=$surf, NbPieces=$nbP, DomaineUsage='$dom', SurfaceEspaceCommun=$surfEspace WHERE reference=$ref";
+            echo $ref, $prop, $loc, $surf, $nbP, $dom, $surfEspace;
+            $sql = "UPDATE appartement 
+                    SET proprietaire='$prop', 
+                        localite='$loc', 
+                        surface=$surf, 
+                        NbPieces=$nbP, 
+                        DomaineUsage='$dom', 
+                        SurfaceEspaceCommun=$surfEspace 
+                    WHERE appartement.reference=$ref";
             $res = $this->connexion->exec($sql);
             return $res;
         }

@@ -15,6 +15,7 @@
             $obj = new crudAppartement();
 
             $result = $obj->ModifierApp($appartement);
+
             if(!$result) {
                 header("Location: http://localhost:3044/ListerAppartement.php?state=0");
             } else {
@@ -26,7 +27,7 @@
     }
 ?>
 
-<form action="<?=$_SERVER['PHP_SELF']?>" method="POST" class="form-horizontal col-md-8 col-md-offset-2">
+<form action="<?=$_SERVER['PHP_SELF']?>?ref=<?=$_GET['ref']?>" method="POST" class="form-horizontal col-md-8 col-md-offset-2">
     <div class="form-group">
         <label for="Proprietaire" class="col-md-4 control-label">Propriétaire</label>
         <div class="col-md-9">
